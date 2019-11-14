@@ -30,6 +30,7 @@ export default function MyForm() {
             name: '',
             email: '',
             password: '',
+            tos: false
         }}
         render={props => {
             return (
@@ -41,7 +42,7 @@ export default function MyForm() {
                     <ErrorMessage name='email' component='div' /><br />
                     <Field name='password' type='text' placeholder='Password: ' />
                     <ErrorMessage name='password' component='div' /><br />
-                    <label><a href=''>Terms of Service</a> Agree:<input type='checkbox' /></label><br />
+                    <label><a href=''>Terms of Service</a> Agree:<Field name='tos' type='checkbox' /></label><br />
                     <input type='submit' />
                 </Form>
             )
