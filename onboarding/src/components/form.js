@@ -16,7 +16,7 @@ const validate = Yup.object().shape({
         .max(15, 'Must be between 5 and 15')
         .required('This is a required field'),
     email: Yup.string()
-
+        .email('Valid Email required')
         .required('This is a required field'),
     password: Yup.string()
         .min(5, 'Must be between 5 and 15')
